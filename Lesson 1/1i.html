@@ -10,20 +10,14 @@
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
     <script type="text/babel">
       
-      const button = <button>Hello</button>
-      const paragraph = <p>paragraph of text</p>
-
-      const div = (
-        <div>
-          <button>Hello</button>
-          <p>paragraph of text {2 + 2}</p>
-        </div>
-      );
-
+      const time = <p>Current time:{dayjs().format('HH:mm:ss')}</p>
+      console.log(dayjs().format('MMMM D'))
+      
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+      ReactDOM.createRoot(container).render(time);
     </script>
   </body>
 </html>
